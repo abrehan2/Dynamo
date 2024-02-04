@@ -1,11 +1,14 @@
+// IMPORTS -
+
 
 
 const Dashboard = () => {
-    return(
-        <div>
-            This is a dashboard (Protected)
-        </div>
-    )
+    return (
+      <div>
+        <p>This is a dashboard (Protected)</p>
+      
+      </div>
+    );
 }
 
 export default Dashboard;

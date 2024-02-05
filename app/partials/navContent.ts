@@ -50,14 +50,14 @@ const routes: routeProps[] = [
     label: "Code",
     Icon: Code,
     href: "/code",
-    color: "text-slate-500",
+    color: "text-red-600",
   },
 
   {
     label: "Actions",
     Icon: Settings,
     href: "/setting",
-    color: "text-red-600",
+    color: "text-gray-600",
   },
 ];
 

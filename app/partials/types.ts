@@ -7,3 +7,8 @@ export type routeProps = {
   href: string;
   color: string;
 };
+
+// HYDRATE PROPS -
+export type hydrateProps = {
+  children: React.ReactNode
+}

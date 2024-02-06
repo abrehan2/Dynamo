@@ -30,3 +30,8 @@ export type headingProps = {
   iconColor?: string;
   bgColor?: string;
 };
+
+// EMPTY PROPS -
+export type emptyState = {
+  label: string
+}

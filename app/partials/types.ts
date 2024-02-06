@@ -12,3 +12,12 @@ export type routeProps = {
 export type hydrateProps = {
   children: React.ReactNode
 }
+
+// TOOLS PROPS -
+export type toolProps = {
+  label: string,
+  Icon: LucideIcon,
+  href: string,
+  color: string,
+  bgColor: string,
+};

@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import { ClerkProvider } from "@clerk/nextjs";
 import "./globals.css";
-import Hydrate from "./partials/Hydrate";
+import Hydrate from "../components/Hydrate";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -24,8 +24,8 @@ export default function RootLayout({
           <Hydrate>{children}</Hydrate>
         </body>
       </html>
-    </ClerkProvider> 
+    </ClerkProvider>
   );
 }
 
-// 1:01:33
+// 1:17:03

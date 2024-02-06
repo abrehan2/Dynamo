@@ -2,7 +2,7 @@
 
 // IMPORTS -
 import { useEffect, useState } from "react";
-import { hydrateProps } from "./types";
+import { hydrateProps } from "../app/partials/types";
 
 const Hydrate: React.FC<hydrateProps> = ({ children }) => {
   const [mounted, setMounted] = useState(false);

@@ -1,6 +1,6 @@
 // IMPORTS -
 import { emptyState } from "@/app/partials/types";
-import Image from "next/image";
+// import Image from "next/image";
 
 const Empty = ({ label }: emptyState) => {
   return (

@@ -2,7 +2,7 @@
 
 // IMPORTS -
 import * as z from "zod";
-import { MessageCircle } from "lucide-react";
+import { Code } from "lucide-react";
 import { useForm } from "react-hook-form";
 import { formSchema } from "@/app/partials/constants";
 import { zodResolver } from "@hookform/resolvers/zod";
@@ -22,9 +22,10 @@ import { Form, FormControl, FormField, FormItem } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import Heading from "@/components/Heading";
+import ReactMarkdown from "react-markdown";
 
 // CODE -
-const Conversation = () => {
+const Coding = () => {
   const [message, setMessage] = useState<ChatCompletionRequestMessage[]>([]);
   const [error, setError] = useState<string>("");
   const { toast } = useToast();
@@ -57,7 +58,7 @@ const Conversation = () => {
 
       const newMessages = [...message, userMessage];
 
-      const res = await axios.post("/api/conversation", {
+      const res = await axios.post("/api/code", {
         messages: newMessages,
       });
 
@@ -75,11 +76,11 @@ const Conversation = () => {
   return (
     <div>
       <Heading
-        title="Conversation"
-        description="Let's groove into this conversation! What's on your mind?"
-        Icon={MessageCircle}
-        iconColor="text-green-600"
-        bgColor="bg-green-600/10"
+        title="Code"
+        description="Let's groove with some code! What's on the agenda?"
+        Icon={Code}
+        iconColor="text-red-600"
+        bgColor="bg-red-600/10"
       />
 
       <div className="px-4 lg:px-8">
@@ -109,7 +110,7 @@ const Conversation = () => {
                         className="border-0 outline-none focus-visible:ring-0 focus-visible:ring-transparent
                         shadow-none bg-zinc-100 px-3"
                         disabled={isLoading}
-                        placeholder="How do I calculate the radius of a circle?"
+                        placeholder="Write me a program in python to calculate the area of triangle"
                         autoComplete="off"
                       />
                     </FormControl>
@@ -149,7 +150,28 @@ const Conversation = () => {
                 )}
               >
                 {m?.role === "user" ? <UserAvatar /> : <BotAvatar />}
-                <p className="text-sm">{m.content}</p>
+
+                <ReactMarkdown
+                  components={{
+                    pre: ({ node, ...props }) => (
+                      <div
+                        className="
+                        overflow-auto w-full my-2 bg-black/10
+                        p-2 rounded-lg
+                        "
+                      >
+                        <pre {...props} />
+                      </div>
+                    ),
+
+                    code: ({ node, ...props }) => (
+                      <code {...props} className="bg-black/10 p-1 rounded-lg" />
+                    ),
+                  }}
+                  className={"text-sm overflow-hidden leading-7"}
+                >
+                  {m.content || ""}
+                </ReactMarkdown>
               </div>
             ))}
           </div>
@@ -159,4 +181,4 @@ const Conversation = () => {
   );
 };
 
-export default Conversation;
+export default Coding;

@@ -10,12 +10,11 @@ const LandingHero = () => {
   return (
     <div
       className="text-white font-bold py-36 text-center *:
-    space-y-5"
+    space-y-5 md:px-4"
     >
       <div
         className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl
-        space-y-5 font-extrabold 
-        "
+        space-y-5 font-extrabold"
       >
         <h1>Get the AI experience you deserve with this promising tool</h1>
 

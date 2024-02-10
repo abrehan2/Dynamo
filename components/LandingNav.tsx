@@ -20,9 +20,8 @@ const LandingNav = () => {
 
   return (
     <nav
-      className="md:p-4 p-10 bg-transparent flex items-center 
-  justify-between
-  "
+      className="p-4 bg-transparent flex items-center 
+  justify-between"
     >
       <Link className="flex items-center overflow-hidden" href={"/"}>
         <div className="relative h-fit w-fit mr-4">

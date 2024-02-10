@@ -13,8 +13,8 @@ const LandingHero = () => {
     space-y-5 md:px-4"
     >
       <div
-        className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl
-        space-y-5 font-extrabold"
+        className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl
+        space-y-5 font-extrabold md:px-0 px-4"
       >
         <h1>Get the AI experience you deserve with this promising tool</h1>
 

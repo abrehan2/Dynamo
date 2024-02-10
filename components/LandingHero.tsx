@@ -2,6 +2,7 @@
 
 // IMPORTS -
 import { useAuth } from "@clerk/nextjs";
+import TypewriterComponent from "typewriter-effect";
 
 const LandingHero = () => {
   const { isSignedIn } = useAuth();
@@ -9,8 +10,7 @@ const LandingHero = () => {
   return (
     <div
       className="text-white font-bold py-36 text-center *:
-    space-y-5
-    "
+    space-y-5"
     >
       <div
         className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl
@@ -18,6 +18,19 @@ const LandingHero = () => {
         "
       >
         <h1>Get the AI experience you deserve with this promising tool</h1>
+
+        <div
+          className="text-transparent bg-clip-text
+      bg-gradient-to-r from-slate-400 to-zinc-600"
+        >
+          <TypewriterComponent
+            options={{
+              strings: ["Conversation.", "Visual.", "Video.", "Bop.", "Code."],
+              autoStart: true,
+              loop: true,
+            }}
+          />
+        </div>
       </div>
     </div>
   );

@@ -2,7 +2,7 @@
 
 // IMPORTS -
 import { Montserrat } from "next/font/google";
-import Image from "next/image";
+import { LinkedinIcon, Github } from "lucide-react";
 import Link from "next/link";
 import { useAuth } from "@clerk/nextjs";
 
@@ -31,6 +31,16 @@ const LandingNav = () => {
           </h1>
         </div>
       </Link>
+
+      <div className="flex items-center gap-x-2">
+        <Link href={"https://www.linkedin.com/in/abrehan/"}>
+          <LinkedinIcon className={cn("w-6 h-6 text-white")} />
+        </Link>
+
+        <Link href={"https://github.com/abrehan2"}>
+          <Github className={cn("w-6 h-6 text-white")} />
+        </Link>
+      </div>
 
       <div className="flex items-center gap-x-2">
         <Link href={isSignedIn ? "/dashboard" : "/sign-up"}>

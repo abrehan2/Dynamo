@@ -1,4 +1,5 @@
 // IMPORTS -
+import LandingHero from "@/components/LandingHero";
 import LandingNav from "@/components/LandingNav";
 
 const Root = () => {
@@ -6,6 +7,7 @@ const Root = () => {
     <>
       <div className="h-full">
         <LandingNav />
+        <LandingHero />
       </div>
     </>
   );

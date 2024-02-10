@@ -6,6 +6,9 @@ import Hydrate from "../components/Hydrate";
 import { Toaster } from "@/components/ui/toaster";
 import CrispProvider from "@/components/providers/CrispProvider";
 import "./globals.css";
+import { Suspense } from "react";
+import Loading from "./loading";
+import Loader from "@/components/Loader";
 
 const inter = Inter({ subsets: ["latin"] });
 

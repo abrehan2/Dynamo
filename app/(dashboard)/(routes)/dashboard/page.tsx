@@ -19,13 +19,11 @@ const Dashboard = () => {
 
         <p
           className="text-muted-foreground font-light text-sm md:text-lg
-        text-center       
-        "
-        >
+        text-center">
           We promise the experience you deserve
         </p>
       </div>
-      <div className="px-4 md:px-20 lg:px-32 py-[3rem] grid md:grid-cols-2 gap-3 ">
+      <div className="px-4 md:px-20 lg:px-32 py-[3rem] grid md:grid-cols-2 gap-3">
         {tools.map((tool) => (
           <Card
             key={tool.href}

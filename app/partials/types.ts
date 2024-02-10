@@ -35,3 +35,10 @@ export type headingProps = {
 export type emptyState = {
   label: string
 }
+
+// OPEN AI -
+export interface ChatCompletionRequestMessage {
+  role: "user" | "system";
+  content: string;
+  name?: string;
+}

@@ -8,7 +8,6 @@ import { formSchema } from "@/app/partials/constants";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
-import { ChatCompletionRequestMessage } from "openai";
 import axios from "axios";
 import { cn } from "@/lib/utils";
 
@@ -22,6 +21,7 @@ import { Form, FormControl, FormField, FormItem } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import Heading from "@/components/Heading";
+import { ChatCompletionRequestMessage } from "@/app/partials/types";
 
 // CODE -
 const Conversation = () => {
@@ -44,6 +44,8 @@ const Conversation = () => {
       toast({
         description: error,
         variant: "destructive",
+        dir: ""
+        
       });
     }
   }, [error, toast]);

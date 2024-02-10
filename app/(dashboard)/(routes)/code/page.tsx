@@ -8,7 +8,6 @@ import { formSchema } from "@/app/partials/constants";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
-import { ChatCompletionRequestMessage } from "openai";
 import axios from "axios";
 import { cn } from "@/lib/utils";
 
@@ -23,6 +22,7 @@ import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import Heading from "@/components/Heading";
 import ReactMarkdown from "react-markdown";
+import { ChatCompletionRequestMessage } from "@/app/partials/types";
 
 // CODE -
 const Coding = () => {

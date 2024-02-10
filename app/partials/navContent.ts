@@ -52,13 +52,7 @@ const routes: routeProps[] = [
     href: "/code",
     color: "text-red-600",
   },
-
-  {
-    label: "Actions",
-    Icon: Settings,
-    href: "/setting",
-    color: "text-gray-600",
-  },
+ 
 ];
 
 export default routes;

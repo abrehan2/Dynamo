@@ -13,14 +13,14 @@ export async function POST(req: NextRequest) {
     const body = await req.json();
     const { prompt, amount = 1, resolution = "512x512" } = body;
 
-    if (!userId) return new NextResponse("Unauthorized", { status: 401 });
+    if (!userId) {return new NextResponse("Unauthorized", { status: 401 });}
 
-    if (!prompt) return new NextResponse("Prompt is required", { status: 400 });
+    if (!prompt) {return new NextResponse("Prompt is required", { status: 400 });}
 
-    if (!amount) return new NextResponse("Amount is required", { status: 400 });
+    if (!amount) {return new NextResponse("Amount is required", { status: 400 });}
 
     if (!resolution)
-      return new NextResponse("Resolution is required", { status: 400 });
+      {return new NextResponse("Resolution is required", { status: 400 });}
 
     const response = await ai.images.generate({
       prompt,

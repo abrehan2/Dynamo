@@ -13,10 +13,13 @@ export async function POST(req: NextRequest) {
     const body = await req.json();
     const { messages } = body;
 
-    if (!userId) return new NextResponse("Unauthorized", { status: 401 });
+    if (!userId) {
+      return new NextResponse("Unauthorized", { status: 401 });
+    }
 
-    if (!messages)
+    if (!messages) {
       return new NextResponse("Messages are required", { status: 400 });
+    }
 
     const response = await ai.chat.completions.create({
       model: "gpt-3.5-turbo",

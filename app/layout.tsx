@@ -4,6 +4,7 @@ import { Inter } from "next/font/google";
 import { ClerkProvider } from "@clerk/nextjs";
 import Hydrate from "../components/Hydrate";
 import { Toaster } from "@/components/ui/toaster";
+import CrispProvider from "@/components/providers/CrispProvider";
 import "./globals.css";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -21,6 +22,7 @@ export default function RootLayout({
   return (
     <ClerkProvider>
       <html lang="en">
+        <CrispProvider />
         <body className={inter.className}>
           <Hydrate>{children}</Hydrate>
           <Toaster />
@@ -30,4 +32,4 @@ export default function RootLayout({
   );
 }
 
-// 3:04:08
+// 3:19:14

@@ -1,6 +1,6 @@
 # Synopsis
 
-Dynamo is a AI based web application using t
+Dynamo is a custom-developed AI web application that utilizes the services of OpenAI and Replicate. It is built on Next.js using TypeScript and Shadcn. The application features various services and has a chatbot integrated using Crisp for real-time communication.
 
 ## Prerequisites
 
